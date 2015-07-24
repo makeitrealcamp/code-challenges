@@ -21,9 +21,8 @@ def binary_search(array, target)
 end
 
 # Tests
-def assert(expr)
-  raise "Assertion failed !" unless expr
-end
+require "test/unit/assertions"
+include Test::Unit::Assertions
 
 assert binary_search([1, 2, 3, 4], 1) == 0
 assert binary_search([1, 2, 3, 4], 2) == 1
