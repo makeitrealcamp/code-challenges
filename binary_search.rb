@@ -12,7 +12,7 @@ def binary_search(array, target)
 
     if target < array[middle_index] # Descartamos la mitad derecha del arreglo
       hi = middle_index - 1
-    elsif target > array[middle_index] # Descartamos la mitad izquierda del arreglo
+    else # Descartamos la mitad izquierda del arreglo
       lo = middle_index + 1
     end
   end
