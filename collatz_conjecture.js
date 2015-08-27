@@ -13,10 +13,10 @@ function isEven(n) {
 }
 
 // returna un entero
-function blah (n, m) {
+function collatz (n, m) {
   var major = 0;
   for (var i = n; i <= m; i++) {
-    major = Math.max(major, seqLength(i));
+    major = Math.max(major, cycleLength(i));
   }
 
   return major;
@@ -27,7 +27,7 @@ function blah (n, m) {
 var cache = {1: 1};
 
 // 1 2 3
-function seqLength (n) {
+function cycleLength (n) {
     var j = 1;
     var m = n;
 
@@ -64,7 +64,7 @@ var tests = [
 
 for ( var i = 0; i < tests.length; i++) {
     var t = tests[i];
-    console.assert(blah(t.n, t.m) == t.r, t);
+    console.assert(collatz(t.n, t.m) == t.r, t);
 }
 
 
